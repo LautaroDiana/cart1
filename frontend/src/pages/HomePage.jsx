@@ -6,11 +6,10 @@ import ProductCard from "../components/ProductCard";
 
 const HomePage = () => {
   const { products, fetchProducts } = useProductStore();
+
   useEffect(() => {
     fetchProducts();
   }, [fetchProducts]);
-
-  console.log(products);
 
   return (
     <Container maxW={"container.xl"} py={12}>
